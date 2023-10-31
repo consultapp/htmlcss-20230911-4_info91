@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component page</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script
+      src="/components/navigation/script.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <div class="componentPage">
+      <div class="container componentPage__container">
+        <div class="componentPage__wrapper">
+          <header class="header componentPage__header">
+            <div class="header__top">
+              <svg
+                class="header__menuToggle"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                id="navigationOpen"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+                  fill="#212429"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                  fill="#212429"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+                  fill="#212429"
+                />
+              </svg>
+
+              <div class="header__logo">
+                <svg fill="none" width="30" height="30">
+                  <use href="/assets/images/svg-sprites.svg#square" />
+                </svg>
+                <svg fill="none" width="32" height="32">
+                  <use href="/assets/images/svg-sprites.svg#round" />
+                </svg>
+                <svg fill="none" width="32" height="32">
+                  <use href="/assets/images/svg-sprites.svg#triangle" />
+                </svg>
+              </div>
+              <div class="header__topMenu">
+                <nav class="header__topNav">
+                  <a
+                    link=""
+                    class="header__topNavItem header__topNavItem_active"
+                    >Components</a
+                  >
+                  <a link="" class="header__topNavItem">About</a>
+                  <a link="" class="header__topNavItem">Contacts</a>
+                </nav>
+                <button class="header__topToggleButton">ThemeToggle</button>
+              </div>
+            </div>
+          </header>
+          <nav id="navigation" class="navigation componentPage__navigation">
+            <header class="header navigation__header">
+              <div class="header__top">
+                <svg
+                  id="navigationClose"
+                  class="header__menuToggle"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="12" fill="#DDE2E5" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"
+                    fill="#212429"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                    fill="#212429"
+                  />
+                </svg>
+
+                <div class="header__logo">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="30" height="30" fill="#212429" />
+                  </svg>
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="32" height="32" rx="16" fill="#212429" />
+                  </svg>
+
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0L32 32H0V0Z" fill="#212429" />
+                  </svg>
+                </div>
+              </div>
+            </header>
+            <div class="navigation__divider"></div>
+            <div class="navigation__themeTogglerWrapper">
+              <span class="navigation__themeName">Dark mode</span>
+              <button>Toggler</button>
+            </div>
+            <div class="navigation__divider"></div>
+            <h4 class="navigation__topic">Elements</h4>
+            <a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a
+            ><a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a>
+            <div class="navigation__divider"></div>
+            <h4 class="navigation__topic">Containers</h4>
+            <a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a
+            ><a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a>
+            <h4 class="navigation__topic">Templates</h4>
+            <div class="navigation__divider"></div>
+            <a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a
+            ><a class="navigation__link">Avatar</a
+            ><a class="navigation__link">Custom form elements</a
+            ><a class="navigation__link">Button</a>
+          </nav>
+          <main class="componentPage__main">main</main>
+          <footer class="footer componentPage__footer">
+            <h5 class="footer__smallHeader">Reusable component library</h5>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
