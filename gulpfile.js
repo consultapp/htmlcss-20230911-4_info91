@@ -2,7 +2,7 @@ import gulp from 'gulp';
 const { src, dest, watch, series } = gulp;
 import { deleteAsync } from 'del';
 import gls from 'gulp-live-server';
-
+import flatten from 'flatten';
 // CSS
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -39,6 +39,13 @@ function html() {
     )
     .pipe(dest('dist'));
 }
+
+function images() {
+  return src(['src/**/*.svg', 'src/**/*.jpg'])
+    .pipe(flatten())
+    .pipe(dest('dist/assets/'));
+}
+
 function css() {
   return src('src/**/**.scss')
     .pipe(sourcemaps.init())
@@ -54,7 +61,7 @@ function clear() {
   return deleteAsync('dist');
 }
 
-const build = series([clear, css, html]);
-const dev = series([clear, css, html, serve]);
+const build = series([clear, css, html, images]);
+const dev = series([clear, css, html, images, serve]);
 
 export { build, dev };
