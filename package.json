@@ -33,7 +33,6 @@
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-live-server": "^0.0.31",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "mocha": "^10.2.0",

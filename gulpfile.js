@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 const { src, dest, watch, series } = gulp;
 import { deleteAsync } from 'del';
-import gls from 'gulp-live-server';
+import syncServer from 'browser-sync';
 import flatten from 'flatten';
 // CSS
 import * as dartSass from 'sass';
@@ -19,15 +19,7 @@ import include from 'gulp-file-include';
 // import terser from 'gulp-terser';
 // import imagemin from 'gulp-imagemin';
 // import imagewebp from 'gulp-webp';
-
-function serve() {
-  var server = gls.static('dist', 8888);
-  server.start();
-
-  watch(['dist/**/*.*'], function (file) {
-    server.notify.apply(server, [file]);
-  });
-}
+const sync = syncServer.create();
 
 function html() {
   return src('src/pages/**/**.html')
@@ -61,7 +53,14 @@ function clear() {
   return deleteAsync('dist');
 }
 
-const build = series([clear, css, html, images]);
-const dev = series([clear, css, html, images, serve]);
+function serve() {
+  sync.init({ server: './dist' });
+
+  watch(['src/**/**.html'], series(html)).on('change', sync.reload);
+  watch(['src/**/**.scss'], series(css)).on('change', sync.reload);
+}
+
+const build = series([clear, css, html]);
+const dev = series([clear, css, html, serve]);
 
 export { build, dev };

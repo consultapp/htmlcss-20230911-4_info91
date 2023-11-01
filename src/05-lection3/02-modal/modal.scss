@@ -61,5 +61,11 @@
     position: relative;
     width: 284px;
     height: 222px;
+    background-color: var(--grey-3);
+  }
+
+  &_preview &__container {
+    padding: 15px;
+    transform: scale(0.7);
   }
 }
