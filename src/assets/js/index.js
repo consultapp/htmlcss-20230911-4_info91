@@ -1,4 +1,6 @@
 window.addEventListener('load', () => {
+  document.body.classList.remove('preload');
+
   const html = document.querySelector('html');
   const themeToggler = document.querySelectorAll('[data-theme-toggler]');
   themeToggler.forEach((item) => {

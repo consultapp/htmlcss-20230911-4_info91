@@ -40,6 +40,10 @@ body {
   margin: 0;
 }
 
+.preload * {
+  transition: none !important;
+}
+
 html,
 body {
   height: 100%;

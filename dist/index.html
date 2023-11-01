@@ -9,10 +9,65 @@
 <link rel="stylesheet" href="/css/library.min.css" />
 <script src="/js/script.js" type="text/javascript"></script>
 
-    <title>Main page1</title>
+    <title>Reusable component library</title>
   </head>
-  <body>
+  <body class="preload">
     <div class="page">
+      <nav id="navigation" class="navigation componentPage__navigation">
+  <header class="header navigation__header">
+    <div class="header__top">
+      <svg
+        id="navigationClose"
+        class="header__menuToggle"
+        width="30"
+        height="30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use href="/assets/images/svg-sprites.svg#close" />
+      </svg>
+
+      <div class="header__logo">
+        <svg fill="none" width="30" height="30">
+          <use href="/assets/images/svg-sprites.svg#square" />
+        </svg>
+        <svg fill="none" width="32" height="32">
+          <use href="/assets/images/svg-sprites.svg#round" />
+        </svg>
+        <svg fill="none" width="32" height="32">
+          <use href="/assets/images/svg-sprites.svg#triangle" />
+        </svg>
+      </div>
+    </div>
+  </header>
+  <div class="navigation__divider"></div>
+  <div class="navigation__themeTogglerWrapper">
+    <span class="navigation__themeName">Dark mode</span>
+    <button>Toggler</button>
+  </div>
+  <div class="navigation__divider"></div>
+  <h4 class="navigation__topic">Elements</h4>
+  <a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a><a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a>
+  <div class="navigation__divider"></div>
+  <h4 class="navigation__topic">Containers</h4>
+  <a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a><a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a>
+  <h4 class="navigation__topic">Templates</h4>
+  <div class="navigation__divider"></div>
+  <a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a><a class="navigation__link">Avatar</a
+  ><a class="navigation__link">Custom form elements</a
+  ><a class="navigation__link">Button</a>
+</nav>
+
       <header class="header">
   <div class="container">
     <div class="header__top">
