@@ -1,0 +1,14 @@
+.avatar {
+  display: block;
+  background: url('./public/avatar-200.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 102px;
+  height: 102px;
+}
+
+.avatar_preview {
+  width: 160px;
+  height: 160px;
+}

@@ -38,21 +38,29 @@ function images() {
     .pipe(dest('dist/assets/images/'));
 }
 
-function css() {
+function scss() {
   return src('src/**/**.scss')
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('style.css'))
+    .pipe(concat('style.min.css'))
+    .pipe(minify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist/css'));
+}
+function library() {
+  return src('src/library/**.css')
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+    .pipe(concat('library.min.css'))
     .pipe(minify())
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/css'));
 }
 
+const jsSrc = ['src/**/**.js'];
 function js() {
-  return src(['src/assets/js/**.js', 'src/components/**/*.js'])
-    .pipe(concat('script.js'))
-    .pipe(dest('dist/js'));
+  return src(jsSrc).pipe(concat('script.js')).pipe(dest('dist/js'));
 }
 
 function clear() {
@@ -63,15 +71,13 @@ function serve() {
   sync.init({ server: './dist' });
 
   watch(['src/**/**.html'], series(html)).on('change', sync.reload);
-  watch(['src/**/**.scss'], series(css)).on('change', sync.reload);
+  watch(['src/**/**.scss'], series(scss)).on('change', sync.reload);
+  watch(['src/library/**.css'], series(library)).on('change', sync.reload);
   watch(['src/assets/images/*'], series(images)).on('change', sync.reload);
-  watch(['src/assets/js/**.js', 'src/components/**/*.js'], series(js)).on(
-    'change',
-    sync.reload,
-  );
+  watch(jsSrc, series(js)).on('change', sync.reload);
 }
 
-const build = series([clear, css, html, js, images]);
-const dev = series([clear, css, html, js, images, serve]);
+const build = series([clear, scss, library, html, js, images]);
+const dev = series([clear, scss, library, html, js, images, serve]);
 
 export { build, dev, images };

@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/style.min.css" />
+<link rel="stylesheet" href="/css/library.min.css" />
 <script src="/js/script.js" type="text/javascript"></script>
 
     <title>Main page1</title>
@@ -13,82 +14,83 @@
   <body>
     <div class="page">
       <header class="header">
-        <div class="container">
-          <div class="header__top">
-            <div class="header__logo">
-              <svg
-                class="header__menuToggle"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                id="navigationOpen"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
-                  fill="#212429"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
-                  fill="#212429"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
-                  fill="#212429"
-                />
-              </svg>
-              <svg fill="none" width="30" height="30">
-                <use href="/assets/images/svg-sprites.svg#square" />
-              </svg>
-              <svg fill="none" width="32" height="32">
-                <use href="/assets/images/svg-sprites.svg#round" />
-              </svg>
-              <svg fill="none" width="32" height="32">
-                <use href="/assets/images/svg-sprites.svg#triangle" />
-              </svg>
-            </div>
-            <div class="header__topMenu">
-              <nav class="header__topNav">
-                <a link="" class="header__topNavItem header__topNavItem_active"
-                  >Components</a
-                >
-                <a link="" class="header__topNavItem">About</a>
-                <a link="" class="header__topNavItem">Contacts</a>
-              </nav>
-              <label class="toggler header__topToggleButton" data-theme-toggler>
-                <svg
-                  fill="none"
-                  width="24"
-                  height="24"
-                  class="header__topThemeIconLight"
-                >
-                  <use href="/assets/images/svg-sprites.svg#sun" />
-                </svg>
-                <input class="toggler__input" type="checkbox" />
-                <div class="toggler__base">
-                  <div class="toggler__switch"></div>
-                </div>
-                <svg
-                  fill="none"
-                  width="20"
-                  height="20"
-                  class="header__topThemeIconDark"
-                >
-                  <use href="/assets/images/svg-sprites.svg#moon" />
-                </svg>
-              </label>
-            </div>
+  <div class="container">
+    <div class="header__top">
+      <div class="header__logo">
+        <svg
+          class="header__menuToggle"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          id="navigationOpen"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z"
+            fill="#212429"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+            fill="#212429"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z"
+            fill="#212429"
+          />
+        </svg>
+        <svg fill="none" width="30" height="30">
+          <use href="/assets/images/svg-sprites.svg#square" />
+        </svg>
+        <svg fill="none" width="32" height="32">
+          <use href="/assets/images/svg-sprites.svg#round" />
+        </svg>
+        <svg fill="none" width="32" height="32">
+          <use href="/assets/images/svg-sprites.svg#triangle" />
+        </svg>
+      </div>
+      <div class="header__topMenu">
+        <nav class="header__topNav">
+          <a link="" class="header__topNavItem header__topNavItem_active"
+            >Components</a
+          >
+          <a link="" class="header__topNavItem">About</a>
+          <a link="" class="header__topNavItem">Contacts</a>
+        </nav>
+        <label class="toggler header__topToggleButton" data-theme-toggler>
+          <svg
+            fill="none"
+            width="24"
+            height="24"
+            class="header__topThemeIconLight"
+          >
+            <use href="/assets/images/svg-sprites.svg#sun" />
+          </svg>
+          <input class="toggler__input" type="checkbox" />
+          <div class="toggler__base">
+            <div class="toggler__switch"></div>
           </div>
-          <h1 class="header__title">Reusable component library</h1>
-        </div>
-      </header>
+          <svg
+            fill="none"
+            width="20"
+            height="20"
+            class="header__topThemeIconDark"
+          >
+            <use href="/assets/images/svg-sprites.svg#moon" />
+          </svg>
+        </label>
+      </div>
+    </div>
+    <h1 class="header__title">Reusable component library</h1>
+  </div>
+</header>
+
       <main class="main page__main">
         <div class="tabs">
           <input
