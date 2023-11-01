@@ -80,3 +80,7 @@
 .inputText__field:disabled ~ .inputText__icon {
   color: var(--grey-2);
 }
+
+.inputText_preview {
+  margin-top: 15px;
+}
