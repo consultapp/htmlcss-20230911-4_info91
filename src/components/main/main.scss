@@ -1,5 +1,12 @@
 .main {
   background-color: var(--mainBackground);
-  /* padding-top: 68px; */
   padding-bottom: 92px;
+
+  &__header1Wrapper {
+    background-color: var(--backgroundColor);
+    padding: 40px 0 38px 0;
+    @media screen and (max-width: 768px) {
+      padding: 48px 16px 32px 16px;
+    }
+  }
 }
