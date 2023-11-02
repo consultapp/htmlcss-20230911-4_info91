@@ -46,7 +46,7 @@ function scss() {
     .pipe(concat('style.min.css'))
     .pipe(minify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/css'));
+    .pipe(dest('dist/assets/css'));
 }
 function library() {
   return src('src/library/**.css')
@@ -55,12 +55,12 @@ function library() {
     .pipe(concat('library.min.css'))
     .pipe(minify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/css'));
+    .pipe(dest('dist/assets/css'));
 }
 
 const jsSrc = ['src/**/**.js'];
 function js() {
-  return src(jsSrc).pipe(concat('script.js')).pipe(dest('dist/js'));
+  return src(jsSrc).pipe(concat('script.js')).pipe(dest('dist/assets/js'));
 }
 
 function clear() {

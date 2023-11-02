@@ -10,6 +10,10 @@
       @@include('src/components/navigation/index.html')
       @@include('src/components/header/index.html')
       <main class="main page__main">
+        <div class="container">
+          <h1 class="header__title">Reusable component library</h1>
+        </div>
+
         <div class="tabs">
           <input
             class="tabs__radio"
@@ -68,7 +72,7 @@
                 </div>
               </a>
               <a
-                href="/pages/formElement/"
+                href="/checkbox/"
                 class="preview__card tabs__content_simple preview_twoColumns"
               >
                 <div class="preview__item">
@@ -176,10 +180,7 @@
                   <span class="preview__itemType">Element</span>
                 </div>
               </a>
-              <a
-                href="/pages/calendar/"
-                class="preview__card tabs__content_complex"
-              >
+              <a href="/calendar/" class="preview__card tabs__content_complex">
                 <div class="preview__item">
                   <div class="calendar calendar_preview">
                     <p class="calendar__title">October 2019</p>

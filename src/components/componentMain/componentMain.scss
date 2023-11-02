@@ -1,0 +1,35 @@
+.componentMain {
+  padding: 32px 42px 64px 42px;
+  background-color: var(--backgroundColor);
+
+  @media screen and (max-width: 768px) {
+    padding: 32px 16px 32px 16px;
+  }
+
+  &__header {
+    color: var(--grey-4);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+  }
+
+  &__examples {
+    padding-top: 58px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__tabsContainer {
+    margin-top: 64px;
+  }
+
+  &__code {
+    @media screen and (max-width: 768px) {
+      overflow-x: scroll;
+      max-width: calc(100vw - 32px);
+    }
+  }
+}
