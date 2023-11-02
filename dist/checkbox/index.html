@@ -304,7 +304,53 @@
       <div class="tabs__content_simple">
         <pre
           class="componentMain__code"
-        ><code class="language-css"></code></pre>
+        ><code class="language-css">.checkbox__input:focus ~ .checkbox__text {
+  text-decoration: underline;
+}
+.checkbox__input:checked ~ .checkbox__squre {
+  background-color: var(--primary);
+}
+.checkbox__input:disabled ~ .checkbox__squre {
+  background-color: var(--grey-2);
+}
+
+.checkbox__input:disabled ~ .checkbox__text,
+.checkbox__input:disabled ~ .checkbox__squre .checkbox__mark {
+  color: var(--grey-2);
+}
+
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  left: -200px;
+}
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.checkbox__squre {
+  background-color: var(--white);
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--grey-2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox__mark {
+  color: var(--white);
+}
+.checkbox__text {
+  color: var(--grey-4);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+</code></pre>
       </div>
     </div>
   </div>
