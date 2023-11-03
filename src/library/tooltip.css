@@ -32,8 +32,12 @@
   transform: translateX(-50%);
 }
 
-.tooltip__icon:hover ~ .tooltip__datails,
 .tooltip_preview {
+  transform: translateY(30px);
+}
+
+.tooltip__icon:hover ~ .tooltip__datails,
+.tooltip_preview .tooltip__datails {
   opacity: 1;
   left: 50%;
 }
