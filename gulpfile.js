@@ -1,9 +1,14 @@
+// COMMON
 import gulp from 'gulp';
 const { src, dest, watch, series } = gulp;
+
 import { deleteAsync } from 'del';
 import syncServer from 'browser-sync';
+const sync = syncServer.create();
+
 import flatten from 'gulp-flatten';
-// CSS
+
+// STYLE
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
@@ -12,14 +17,14 @@ import minify from 'gulp-clean-css';
 import sourcemaps from 'gulp-sourcemaps';
 import concat from 'gulp-concat';
 
-//HTML
+// HTML
 import include from 'gulp-file-include';
 
-// other
+// IMAGES
+import imagemin from 'gulp-imagemin';
+
 // import terser from 'gulp-terser';
-// import imagemin from 'gulp-imagemin';
 // import imagewebp from 'gulp-webp';
-const sync = syncServer.create();
 
 function html() {
   return src('src/pages/**/**.html')
@@ -34,6 +39,7 @@ function html() {
 
 function images() {
   return src('src/assets/images/*')
+    .pipe(imagemin())
     .pipe(flatten())
     .pipe(dest('dist/assets/images/'));
 }
@@ -48,6 +54,7 @@ function scss() {
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/assets/css'));
 }
+
 function library() {
   return src('src/library/**.css')
     .pipe(sourcemaps.init())
@@ -74,10 +81,11 @@ function serve() {
   watch(['src/**/**.scss'], series(scss)).on('change', sync.reload);
   watch(['src/library/**.css'], series(library)).on('change', sync.reload);
   watch(['src/assets/images/*'], series(images)).on('change', sync.reload);
+
   watch(jsSrc, series(js)).on('change', sync.reload);
 }
 
 const build = series([clear, scss, library, html, js, images]);
 const dev = series([clear, scss, library, html, js, images, serve]);
 
-export { build, dev, images };
+export { build, dev };
