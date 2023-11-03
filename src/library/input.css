@@ -1,0 +1,86 @@
+.inputText {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.inputText__label {
+  color: var(--grey-3);
+
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputText__field {
+  color: var(--grey-4);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  border: 1px solid var(--grey-2);
+  border-radius: 8px;
+
+  padding: 17px 24px 13px 24px;
+
+  transition: border 500ms linear;
+}
+
+.inputText__fieldWrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.inputText__icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.inputText__field::placeholder {
+  color: var(--grey-2);
+}
+
+/* :focus */
+.inputText__field:focus {
+  border: 1px solid var(--success);
+}
+
+/* модификаторы */
+.inputText_invalid .inputText__field:not(:disabled) {
+  border-color: var(--error);
+}
+.inputText_success .inputText__field:not(:disabled) {
+  border-color: var(--success);
+}
+
+.inputText_invalid .inputText__icon_error {
+  visibility: visible;
+  opacity: 1;
+  color: var(--error);
+}
+
+.inputText_success .inputText__icon_success {
+  visibility: visible;
+  opacity: 1;
+  color: var(--success);
+}
+/* :disabled */
+.inputText__field:disabled,
+.inputText__field:disabled ~ .inputText__icon {
+  color: var(--grey-2);
+}
+
+.inputText_preview {
+  margin-top: 15px;
+}
