@@ -1,0 +1,13 @@
+    &lt;div class=&quot;skeleton&quot;&gt;
+      &lt;div class=&quot;skeleton__line&quot;&gt;
+        &lt;div class=&quot;skeleton__circle&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;skeleton__group&quot;&gt;
+          &lt;div class=&quot;skeleton__bar skeleton__bar_small&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;skeleton__bar skeleton__bar_medium&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;skeleton__group&quot;&gt;
+        &lt;div class=&quot;skeleton__bar skeleton__bar_big&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;skeleton__bar skeleton__bar_full&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;

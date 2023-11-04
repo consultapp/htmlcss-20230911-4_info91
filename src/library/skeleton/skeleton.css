@@ -25,11 +25,7 @@
   width: 64px;
   height: 64px;
   border-radius: 32px;
-  background-color: var(--grey-2);
-}
-.skeleton__bar {
-  min-height: 20px;
-
+  background-repeat: repeat-x;
   background: linear-gradient(
     93deg,
     #dde2e5 6.44%,
@@ -38,6 +34,20 @@
     #e3e7ea 77.5%,
     #dde2e5 102.52%
   );
+  animation: 90s linear 0s infinite normal skeletonBackground;
+}
+.skeleton__bar {
+  min-height: 20px;
+  background-repeat: repeat-x;
+  background: linear-gradient(
+    93deg,
+    #dde2e5 6.44%,
+    #e2e6e8 38.47%,
+    #f3f5f5 56.48%,
+    #e3e7ea 77.5%,
+    #dde2e5 102.52%
+  );
+  animation: 50s linear 0s infinite normal skeletonBackground;
 }
 
 .skeleton__bar + .skeleton__bar {
@@ -55,4 +65,17 @@
 }
 .skeleton__bar_full {
   width: 100%;
+}
+
+@keyframes skeletonBackground {
+  from {
+    background-position: 0vw;
+  }
+  to {
+    background-position: 110vw;
+  }
+}
+.skeleton_preview {
+  width: 100%;
+  margin: 0 25px 0 25px;
 }

@@ -89,7 +89,7 @@ function serve() {
     sync.reload,
   );
   watch(['src/**/**.scss'], series(scss)).on('change', sync.reload);
-  watch(['src/library/**.css'], series(library)).on('change', sync.reload);
+  watch(['src/library/**/**.css'], series(library)).on('change', sync.reload);
   watch(['src/assets/images/*'], series(images)).on('change', sync.reload);
 
   watch(jsSrc, series(js)).on('change', sync.reload);
