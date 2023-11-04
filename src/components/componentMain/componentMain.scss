@@ -27,6 +27,16 @@
     &_halfWidth > div {
       min-width: 50%;
     }
+    &_columns {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+  }
+
+  &__exampleColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__tabsContainer {

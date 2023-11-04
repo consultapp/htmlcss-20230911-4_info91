@@ -1,8 +1,13 @@
 @@include('src/components/componentPage/templateTop.html')
 <main class="componentMain">
-  <h1 class="componentMain__header">Checkbox element</h1>
-  <div class="componentMain__examples">
-    @@include('src/library/checkbox/example.html')
+  <h1 class="componentMain__header">Checkbox/Radio elements</h1>
+  <div class="componentMain__examples componentMain__examples_columns">
+    <div class="componentMain__exampleColumn">
+      @@include('src/library/checkbox/example.html')
+    </div>
+    <div class="componentMain__exampleColumn">
+      @@include('src/library/radio/example.html')
+    </div>
   </div>
   <div class="tabs tabs_withLine componentMain__tabsContainer">
     <input
@@ -29,12 +34,12 @@
       <div class="tabs__content_complex">
         <pre
           class="componentMain__code"
-        ><code class="language-html">@@include('src/library/checkbox/code.txt')</code></pre>
+        ><code class="language-html">@@include('src/library/checkbox/code.txt') @@include('src/library/radio/code.txt')</code></pre>
       </div>
       <div class="tabs__content_simple">
         <pre
           class="componentMain__code"
-        ><code class="language-css">@@include('src/library/checkbox/checkbox.css')</code></pre>
+        ><code class="language-css">@@include('src/library/checkbox/checkbox.css') /* RADIO */ @@include('src/library/radio/radio.css')</code></pre>
       </div>
     </div>
   </div>

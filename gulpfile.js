@@ -83,7 +83,10 @@ function clear() {
 function serve() {
   sync.init({ server: './dist' });
 
-  watch(['src/**/**.html'], series(html)).on('change', sync.reload);
+  watch(['src/**/**.html', 'src/**/**.txt'], series(html)).on(
+    'change',
+    sync.reload,
+  );
   watch(['src/**/**.scss'], series(scss)).on('change', sync.reload);
   watch(['src/library/**.css'], series(library)).on('change', sync.reload);
   watch(['src/assets/images/*'], series(images)).on('change', sync.reload);
