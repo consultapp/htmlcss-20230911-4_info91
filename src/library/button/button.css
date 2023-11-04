@@ -4,6 +4,7 @@
 .button {
   display: inline-block;
   height: 48px;
+  min-width: 100px;
 
   border-radius: 8px;
   cursor: pointer;

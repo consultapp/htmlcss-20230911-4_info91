@@ -1,6 +1,7 @@
 .tooltip {
   display: inline-block;
   position: relative;
+  z-index: 1;
 }
 
 .tooltip__datails {

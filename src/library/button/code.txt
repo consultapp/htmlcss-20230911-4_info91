@@ -1,0 +1,39 @@
+&lt;button class=&quot;button button_primary&quot; disabled&gt;Primary disabled&lt;/button&gt;
+&lt;button class=&quot;button button_secondary&quot; disabled&gt;Secondary disabled&lt;/button&gt;
+&lt;button class=&quot;button button_alternate&quot; disabled&gt;Alternate disabled&lt;/button&gt;
+&lt;button class=&quot;button button_primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;button button_secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;button button_alternate&quot;&gt;Alternate&lt;/button&gt;
+
+&lt;!-- TOGGLER --&gt;
+&lt;label class=&quot;toggler&quot;&gt;
+  &lt;input class=&quot;toggler__input&quot; type=&quot;checkbox&quot; /&gt;
+  &lt;div class=&quot;toggler__base&quot;&gt;
+    &lt;div class=&quot;toggler__switch&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;toggler__text&quot;&gt;Off&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;toggler&quot;&gt;
+  &lt;input class=&quot;toggler__input&quot; type=&quot;checkbox&quot; checked /&gt;
+  &lt;div class=&quot;toggler__base&quot;&gt;
+    &lt;div class=&quot;toggler__switch&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;toggler__text&quot;&gt;On&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;toggler&quot;&gt;
+  &lt;input class=&quot;toggler__input&quot; type=&quot;checkbox&quot; disabled /&gt;
+  &lt;div class=&quot;toggler__base&quot;&gt;
+    &lt;div class=&quot;toggler__switch&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;toggler__text&quot;&gt;Disabled&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;toggler&quot;&gt;
+  &lt;input class=&quot;toggler__input&quot; type=&quot;checkbox&quot; disabled checked /&gt;
+  &lt;div class=&quot;toggler__base&quot;&gt;
+    &lt;div class=&quot;toggler__switch&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;toggler__text&quot;&gt;Disabled Checked&lt;/span&gt;
+&lt;/label&gt;
