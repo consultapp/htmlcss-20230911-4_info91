@@ -2,96 +2,7 @@
 <main class="componentMain">
   <h1 class="componentMain__header">Checkbox element</h1>
   <div class="componentMain__examples">
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Default</span>
-    </label>
-
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" checked />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Checked</span>
-    </label>
-
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" checked disabled />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Checked Disabled</span>
-    </label>
-
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" disabled />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Disabled</span>
-    </label>
+    @@include('src/library/checkbox/example.html')
   </div>
   <div class="tabs tabs_withLine componentMain__tabsContainer">
     <input
@@ -116,34 +27,14 @@
     </div>
     <div class="container">
       <div class="tabs__content_complex">
-        <pre class="componentMain__code"><code class="language-html">
-         &lt;label class=&quot;checkbox&quot;&gt;
-            &lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; disabled /&gt;
-            &lt;div class=&quot;checkbox__squre&quot;&gt;
-              &lt;svg
-                class=&quot;checkbox__mark&quot;
-                width=&quot;15&quot;
-                height=&quot;13&quot;
-                viewBox=&quot;0 0 15 13&quot;
-                fill=&quot;none&quot;
-                xmlns=&quot;http://www.w3.org/2000/svg&quot;
-              &gt;
-                &lt;path
-                  d=&quot;M1.5 7.5L5 11L13 2&quot;
-                  stroke-width=&quot;3&quot;
-                  stroke-linecap=&quot;round&quot;
-                  stroke-linejoin=&quot;round&quot;
-                /&gt;
-              &lt;/svg&gt;
-            &lt;/div&gt;
-            &lt;span class=&quot;checkbox__text&quot;&gt;Disabled&lt;/span&gt;
-          &lt;/label&gt;
-        </code></pre>
+        <pre
+          class="componentMain__code"
+        ><code class="language-html">@@include('src/library/checkbox/code.txt')</code></pre>
       </div>
       <div class="tabs__content_simple">
         <pre
           class="componentMain__code"
-        ><code class="language-css">@@include('src/library/checkbox.css')</code></pre>
+        ><code class="language-css">@@include('src/library/checkbox/checkbox.css')</code></pre>
       </div>
     </div>
   </div>

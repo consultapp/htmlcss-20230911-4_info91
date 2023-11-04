@@ -6,6 +6,7 @@ import { deleteAsync } from 'del';
 import syncServer from 'browser-sync';
 const sync = syncServer.create();
 
+import zip from 'gulp-zip';
 import flatten from 'gulp-flatten';
 
 // STYLE
@@ -85,7 +86,14 @@ function serve() {
   watch(jsSrc, series(js)).on('change', sync.reload);
 }
 
-const build = series([clear, scss, library, html, js, images]);
+function archiveLibrary() {
+  return gulp
+    .src('dist/assets/library/*')
+    .pipe(zip('library.zip'))
+    .pipe(gulp.dest('dist'));
+}
+
+const build = series([clear, scss, library, html, js, images, archiveLibrary]);
 const dev = series([clear, scss, library, html, js, images, serve]);
 
 export { build, dev };

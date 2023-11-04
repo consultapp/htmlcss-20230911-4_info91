@@ -1,0 +1,21 @@
+&lt;label class=&quot;checkbox&quot;&gt;
+  &lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; disabled /&gt;
+  &lt;div class=&quot;checkbox__squre&quot;&gt;
+    &lt;svg
+      class=&quot;checkbox__mark&quot;
+      width=&quot;15&quot;
+      height=&quot;13&quot;
+      viewBox=&quot;0 0 15 13&quot;
+      fill=&quot;none&quot;
+      xmlns=&quot;http://www.w3.org/2000/svg&quot;
+    &gt;
+      &lt;path
+        d=&quot;M1.5 7.5L5 11L13 2&quot;
+        stroke-width=&quot;3&quot;
+        stroke-linecap=&quot;round&quot;
+        stroke-linejoin=&quot;round&quot;
+      /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;checkbox__text&quot;&gt;Disabled&lt;/span&gt;
+&lt;/label&gt;
