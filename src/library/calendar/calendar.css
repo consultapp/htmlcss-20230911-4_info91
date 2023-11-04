@@ -61,7 +61,11 @@
   background: var(--calendarCellRange);
 }
 
-
 .calendar_preview {
   width: 50%;
+}
+
+.calendar_page {
+  min-width: 50%;
+  align-self: center;
 }

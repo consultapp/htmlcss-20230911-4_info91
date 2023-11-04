@@ -21,6 +21,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
+    &_single {
+      justify-content: center;
+    }
+    &_halfWidth > div {
+      min-width: 50%;
+    }
   }
 
   &__tabsContainer {

@@ -143,98 +143,40 @@
 
 
 <main class="componentMain">
-  <h1 class="componentMain__header">Checkbox element</h1>
-  <div class="componentMain__examples">
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Default</span>
-    </label>
+  <h1 class="componentMain__header">Histogram</h1>
+  <div
+    class="componentMain__examples componentMain__examples_single componentMain__examples_halfWidth"
+  >
+    <div class="histogram">
+  <div>
+    <header
+      class="histogram__header"
+      style="background-color: var(--backgroundColor)"
+    >
+      <p class="histogram__title">Total orders</p>
+      <a href="#" class="histogram__link">View all</a>
+    </header>
+    <h4 class="histogram__count">50254</h4>
+  </div>
+  <div class="histogram__chart"></div>
+</div>
+<script>
+  window.onload = () => {
+    const chart = document.querySelector('.histogram__chart');
+    const bars = [100];
+    for (let i = 0; i < 29; i++) {
+      bars.push(Math.random() * 100);
+    }
+    const elements = bars.map((item) => {
+      const el = document.createElement('div');
+      el.className = 'histogram__bar';
+      el.style.height = `${item}%`;
+      return el;
+    });
+    chart.append(...elements);
+  };
+</script>
 
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" checked />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Checked</span>
-    </label>
-
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" checked disabled />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke="white"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Checked Disabled</span>
-    </label>
-
-    <label class="checkbox">
-      <input class="checkbox__input" type="checkbox" disabled />
-      <div class="checkbox__squre">
-        <svg
-          class="checkbox__mark"
-          width="15"
-          height="13"
-          viewBox="0 0 15 13"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1.5 7.5L5 11L13 2"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <span class="checkbox__text">Disabled</span>
-    </label>
   </div>
   <div class="tabs tabs_withLine componentMain__tabsContainer">
     <input
@@ -259,78 +201,134 @@
     </div>
     <div class="container">
       <div class="tabs__content_complex">
-        <pre class="componentMain__code"><code class="language-html">
-         &lt;label class=&quot;checkbox&quot;&gt;
-            &lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; disabled /&gt;
-            &lt;div class=&quot;checkbox__squre&quot;&gt;
-              &lt;svg
-                class=&quot;checkbox__mark&quot;
-                width=&quot;15&quot;
-                height=&quot;13&quot;
-                viewBox=&quot;0 0 15 13&quot;
-                fill=&quot;none&quot;
-                xmlns=&quot;http://www.w3.org/2000/svg&quot;
-              &gt;
-                &lt;path
-                  d=&quot;M1.5 7.5L5 11L13 2&quot;
-                  stroke-width=&quot;3&quot;
-                  stroke-linecap=&quot;round&quot;
-                  stroke-linejoin=&quot;round&quot;
-                /&gt;
-              &lt;/svg&gt;
-            &lt;/div&gt;
-            &lt;span class=&quot;checkbox__text&quot;&gt;Disabled&lt;/span&gt;
-          &lt;/label&gt;
-        </code></pre>
+        <pre
+          class="componentMain__code"
+        ><code class="language-html">&lt;div class=&quot;histogram&quot;&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;histogram__header&quot;&gt;
+      &lt;p class=&quot;histogram__title&quot;&gt;Total orders&lt;/p&gt;
+      &lt;span class=&quot;histogram__link histogram_previewLink_solid&quot;&gt;
+        View all
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h4 class=&quot;histogram__count&quot;&gt;50254&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;histogram__chart&quot; id=&quot;previewHistogram&quot;&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 100%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 85.2566%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 67.0671%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 89.5417%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 42.0257%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 48.6861%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 93.981%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 69.8613%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 2.46595%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 66.7328%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 63.3505%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 7.57491%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 32.9139%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 25.2855%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 67.6671%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 41.4404%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 31.1776%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 45.6582%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 80.2207%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 99.3807%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 54.0036%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 43.6207%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 9.78507%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 36.7408%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 24.1856%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 74.3543%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 85.3018%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 84.4595%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 87.7856%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;histogram__bar&quot; style=&quot;height: 60.7711%;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
       </div>
       <div class="tabs__content_simple">
         <pre
           class="componentMain__code"
-        ><code class="language-css">.checkbox__input:focus ~ .checkbox__text {
-  text-decoration: underline;
-}
-.checkbox__input:checked ~ .checkbox__squre {
-  background-color: var(--primary);
-}
-.checkbox__input:disabled ~ .checkbox__squre {
-  background-color: var(--grey-2);
-}
-
-.checkbox__input:disabled ~ .checkbox__text,
-.checkbox__input:disabled ~ .checkbox__squre .checkbox__mark {
-  color: var(--grey-2);
-}
-
-.checkbox__input {
-  position: absolute;
-  opacity: 0;
-  left: -200px;
-}
-.checkbox {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-.checkbox__squre {
-  background-color: var(--white);
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--grey-2);
-  border-radius: 5px;
+        ><code class="language-css">.histogram {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 24px 24px 24px;
+
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
 }
-.checkbox__mark {
-  color: var(--white);
+.histogram__header {
+  display: flex;
+  justify-content: space-between;
 }
-.checkbox__text {
-  color: var(--grey-4);
+
+.histogram__title {
+  color: var(--black);
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin: 0;
+}
+.histogram__link {
+  color: var(--primary);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  margin-top: 3px;
+}
+.histogram__count {
+  color: var(--black);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 6px 0 39px 0;
+}
+
+.histogram__chart {
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+  overflow: hidden;
+}
+.histogram__bar {
+  background: var(--primary);
+  flex-grow: 1;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  animation: grow 400ms ease-in-out;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+  }
+  75% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.histogram__bar ~ .histogram__bar {
+  margin-left: 1px;
+}
+
+/* модификаторы */
+.histogram_preview {
+  width: 100%;
+  margin: 0 25px 0 25px;
+}
+.histogram_previewLink_solid {
+  text-decoration: solid;
 }
 </code></pre>
       </div>

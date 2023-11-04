@@ -56,7 +56,7 @@ function scss() {
 }
 
 function library() {
-  return src('src/library/**.css')
+  return src('src/library/**/**.css')
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(concat('library.min.css'))
