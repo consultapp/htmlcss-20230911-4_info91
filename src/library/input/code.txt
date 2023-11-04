@@ -1,0 +1,172 @@
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot; for=&quot;input1&quot;&gt;Label: &lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper&quot;&gt;
+    &lt;input
+      class=&quot;inputText__field&quot;
+      id=&quot;input1&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot; for=&quot;input2&quot;&gt;Focus: &lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper&quot;&gt;
+    &lt;input
+      id=&quot;input2&quot;
+      class=&quot;inputText__field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+      value=&quot;Filled text&quot;
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot; for=&quot;input3&quot;&gt;Success: &lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper inputText_success&quot;&gt;
+    &lt;input
+      id=&quot;input3&quot;
+      class=&quot;inputText__field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+      value=&quot;Success&quot;
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot; for=&quot;input4&quot;&gt;Error: &lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper inputText_invalid&quot;&gt;
+    &lt;input
+      id=&quot;input4&quot;
+      class=&quot;inputText__field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+      value=&quot;Error&quot;
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot; for=&quot;input6&quot;&gt;Success disabled:&lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper inputText_success&quot;&gt;
+    &lt;input
+      id=&quot;input5&quot;
+      class=&quot;inputText__field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+      value=&quot;Success disabled&quot;
+      disabled
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;inputText&quot;&gt;
+  &lt;label class=&quot;inputText__label&quot;&gt;Error disabled: &lt;/label&gt;
+  &lt;div class=&quot;inputText__fieldWrapper inputText_invalid&quot; for=&quot;input6&quot;&gt;
+    &lt;input
+      id=&quot;input6&quot;
+      class=&quot;inputText__field&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Placeholder&quot;
+      value=&quot;Error disabled&quot;
+      disabled
+    /&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_success&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#success&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;svg
+      class=&quot;inputText__icon inputText__icon_error&quot;
+      fill=&quot;none&quot;
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+    &gt;
+      &lt;use href=&quot;/library/svg-sprites.svg#error&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;

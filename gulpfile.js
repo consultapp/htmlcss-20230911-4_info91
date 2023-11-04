@@ -107,14 +107,14 @@ async function sc() {
   return await new Pageres({ delay: 2 })
     .source(
       'https://clinquant-dodol-36e9f9.netlify.app/histogram/',
-      ['iphone 5s', 'iphone 12', '1280x1024', '1920x1080'],
+      ['iphone 5s', '375x812', '1280x1024', '1920x1080'],
       { crop: true },
     )
-    .source('https://clinquant-dodol-36e9f9.netlify.app/', [
-      '375x812',
-      '1280x1024',
-      '1920x1080',
-    ])
+    .source(
+      'https://clinquant-dodol-36e9f9.netlify.app/',
+      ['375x812', '1280x1024', '1920x1080'],
+      { crop: true },
+    )
     .destination('dist/screenshots')
     .run();
 }
