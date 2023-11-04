@@ -62,7 +62,7 @@ function library() {
     .pipe(concat('library.min.css'))
     .pipe(minify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/css'));
+    .pipe(dest('dist/assets/library'));
 }
 
 const jsSrc = ['src/**/**.js'];

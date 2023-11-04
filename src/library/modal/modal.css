@@ -69,3 +69,9 @@
   padding: 15px;
   transform: scale(0.7);
 }
+
+.modal__container_column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

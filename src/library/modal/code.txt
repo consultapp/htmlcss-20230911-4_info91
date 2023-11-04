@@ -1,0 +1,65 @@
+&lt;button class=&quot;button button_primary&quot; type=&quot;submit&quot; data-modal-opener&gt;
+  Open modal
+&lt;/button&gt;
+&lt;div class=&quot;modal&quot; id=&quot;modal&quot;&gt;
+  &lt;svg class=&quot;modal__close&quot; id=&quot;modal-close&quot; 
+    fill=&quot;none&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;
+      &lt;use href=&quot;/assets/images/svg-sprites.svg#close&quot; /&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;modal__container modal__container_column&quot;&gt;
+    &lt;div class=&quot;inputText&quot;&gt;
+      &lt;label class=&quot;inputText__label&quot; for=&quot;input1&quot;&gt;
+        Name: 
+      &lt;/label&gt;
+      &lt;div class=&quot;inputText__fieldWrapper&quot;&gt;
+        &lt;input
+          class=&quot;inputText__field&quot;
+          id=&quot;input1&quot;
+          type=&quot;text&quot;
+          placeholder=&quot;Placeholder&quot;
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;inputText&quot;&gt;
+      &lt;label class=&quot;inputText__label&quot; for=&quot;input1&quot;&gt;
+        Email: &lt;/label&gt;
+      &lt;div class=&quot;inputText__fieldWrapper&quot;&gt;
+        &lt;input
+          class=&quot;inputText__field&quot;
+          id=&quot;input1&quot;
+          type=&quot;text&quot;
+          placeholder=&quot;Placeholder&quot;
+        /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;button button_primary&quot; type=&quot;
+      submit&quot;
+    &gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  window.addEventListener(&apos;load&apos;, () =&gt; {
+    const close = document.getElementById(&apos;modal-close&apos;);
+    const modal = document.getElementById(&apos;modal&apos;);
+    const modalOpen = document.querySelectorAll(&apos;[data-modal-opener]&apos;);
+
+    if (!close || !modalOpen || !modal) {
+      console.log(&apos;modal init error&apos;, close, modal, modalOpen);
+      return;
+    }
+
+    modalOpen.forEach((item) =&gt; {
+      item.removeAttribute(&apos;data-modal-opener&apos;);
+      item.addEventListener(&apos;click&apos;, () =&gt; {
+        console.log(&apos;click&apos;);
+        modal.setAttribute(&apos;data-open&apos;, false);
+        document.body.overflow = &apos;hidden&apos;;
+      });
+    });
+
+    close.addEventListener(&apos;click&apos;, () =&gt; {
+      modal.removeAttribute(&apos;data-open&apos;);
+      document.body.overflow = &apos;initial&apos;;
+    });
+  });
+&lt;/script&gt;

@@ -1,0 +1,59 @@
+<button class="button button_primary" type="submit" data-modal-opener>
+  Open modal
+</button>
+<div class="modal" id="modal">
+  <svg class="modal__close" id="modal-close" fill="none" width="24" height="24">
+    <use href="/assets/images/svg-sprites.svg#close" />
+  </svg>
+  <div class="modal__container modal__container_column">
+    <div class="inputText">
+      <label class="inputText__label" for="input1">Name: </label>
+      <div class="inputText__fieldWrapper">
+        <input
+          class="inputText__field"
+          id="input1"
+          type="text"
+          placeholder="Placeholder"
+        />
+      </div>
+    </div>
+    <div class="inputText">
+      <label class="inputText__label" for="input1">Email: </label>
+      <div class="inputText__fieldWrapper">
+        <input
+          class="inputText__field"
+          id="input1"
+          type="text"
+          placeholder="Placeholder"
+        />
+      </div>
+    </div>
+    <button class="button button_primary" type="submit">Submit</button>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+    const close = document.getElementById('modal-close');
+    const modal = document.getElementById('modal');
+    const modalOpen = document.querySelectorAll('[data-modal-opener]');
+
+    if (!close || !modalOpen || !modal) {
+      console.log('modal init error', close, modal, modalOpen);
+      return;
+    }
+
+    modalOpen.forEach((item) => {
+      item.removeAttribute('data-modal-opener');
+      item.addEventListener('click', () => {
+        console.log('click');
+        modal.setAttribute('data-open', false);
+        document.body.overflow = 'hidden';
+      });
+    });
+
+    close.addEventListener('click', () => {
+      modal.removeAttribute('data-open');
+      document.body.overflow = 'initial';
+    });
+  });
+</script>

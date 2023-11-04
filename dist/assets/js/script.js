@@ -1,20 +1,16 @@
 window.addEventListener('load', () => {
-  const close = document.getElementById('modal-close');
-  const modal = document.getElementById('modal');
-  const modalOpen = document.getElementById('modal-open');
+  document.body.classList.remove('preload');
 
-  if (!close || !modalOpen || !modal) {
-    return;
-  }
-
-  modalOpen.addEventListener('click', () => {
-    modal.setAttribute('data-open', false);
-    document.body.overflow = 'hidden';
-  });
-
-  close.addEventListener('click', () => {
-    modal.removeAttribute('data-open');
-    document.body.overflow = 'initial';
+  const html = document.querySelector('html');
+  const themeToggler = document.querySelectorAll('[data-theme-toggler]');
+  themeToggler.forEach((item) => {
+    item.addEventListener('mousedown', () => {
+      if (html.hasAttribute('data-theme')) {
+        html.removeAttribute('data-theme');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+      }
+    });
   });
 });
 
@@ -31,21 +27,5 @@ window.addEventListener('load', () => {
     navigation.removeAttribute('data-open');
     open.style.visibility = 'visible';
     close.style.visibility = 'hidden';
-  });
-});
-
-window.addEventListener('load', () => {
-  document.body.classList.remove('preload');
-
-  const html = document.querySelector('html');
-  const themeToggler = document.querySelectorAll('[data-theme-toggler]');
-  themeToggler.forEach((item) => {
-    item.addEventListener('mousedown', () => {
-      if (html.hasAttribute('data-theme')) {
-        html.removeAttribute('data-theme');
-      } else {
-        html.setAttribute('data-theme', 'dark');
-      }
-    });
   });
 });
