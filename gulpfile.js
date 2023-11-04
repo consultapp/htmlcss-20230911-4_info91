@@ -8,6 +8,7 @@ const sync = syncServer.create();
 
 import zip from 'gulp-zip';
 import flatten from 'gulp-flatten';
+import Pageres from 'pageres';
 
 // STYLE
 import * as dartSass from 'sass';
@@ -101,7 +102,24 @@ function archiveLibrary() {
     .pipe(gulp.dest('dist'));
 }
 
+async function sc() {
+  deleteAsync('dist/screenshots');
+  return await new Pageres({ delay: 2 })
+    .source(
+      'https://clinquant-dodol-36e9f9.netlify.app/histogram/',
+      ['iphone 5s', 'iphone 12', '1280x1024', '1920x1080'],
+      { crop: true },
+    )
+    .source('https://clinquant-dodol-36e9f9.netlify.app/', [
+      '375x812',
+      '1280x1024',
+      '1920x1080',
+    ])
+    .destination('dist/screenshots')
+    .run();
+}
+
 const build = series([clear, scss, library, html, js, images, archiveLibrary]);
 const dev = series([clear, scss, library, html, js, images, serve]);
 
-export { build, dev };
+export { build, dev, sc };

@@ -39,6 +39,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-zip": "^6.0.0",
     "mocha": "^10.2.0",
+    "pageres": "^7.1.0",
     "sass": "^1.69.5"
   },
   "dependencies": {
