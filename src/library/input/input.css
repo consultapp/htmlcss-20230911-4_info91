@@ -84,3 +84,7 @@
 .inputText_preview {
   margin-top: 15px;
 }
+
+.inputText_preview {
+  /* transform: scale(0.5); */
+}

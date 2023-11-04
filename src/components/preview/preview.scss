@@ -27,6 +27,9 @@
   justify-content: center;
   align-items: center;
 }
+.preview__item_column {
+  flex-direction: column;
+}
 
 .preview__itemCaption {
   color: var(--fontColor);
