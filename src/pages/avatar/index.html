@@ -1,0 +1,45 @@
+@@include('src/components/componentPage/templateTop.html')
+<main class="componentMain">
+  <h1 class="componentMain__header">Avatar</h1>
+  <div class="componentMain__examples componentMain__examples_single">
+    @@include('src/library/avatar/example.html')
+  </div>
+  <div class="tabs tabs_withLine componentMain__tabsContainer">
+    <input
+      class="tabs__radio"
+      type="radio"
+      id="complex-tab"
+      name="tabs"
+      checked
+    />
+    <input class="tabs__radio" type="radio" id="simple-tab" name="tabs" />
+    <div class="tabs__scroller">
+      <div class="container">
+        <div class="tabs__labelWrapper">
+          <label class="tabs__label tabs_complexTabLine" for="complex-tab"
+            >HTML
+          </label>
+          <label class="tabs__label tabs_simpleTabLine" for="simple-tab"
+            >CSS
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tabs__content_complex">
+        <pre
+          class="componentMain__code"
+        ><code class="language-html">@@include('src/library/avatar/code.txt')</code></pre>
+      </div>
+      <div class="tabs__content_simple">
+        <pre
+          class="componentMain__code"
+        ><code class="language-css">@@include('src/library/avatar/avatar.css')</code></pre>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+  hljs.highlightAll();
+</script>
+@@include('src/components/componentPage/templateBottom.html')

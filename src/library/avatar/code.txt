@@ -1,0 +1,5 @@
+&lt;img
+  src=&quot;./assets/images/avatar-200.jpg&quot;
+  class=&quot;avatar&quot;
+  alt=&quot;Avatar of the person&quot;
+/&gt;
