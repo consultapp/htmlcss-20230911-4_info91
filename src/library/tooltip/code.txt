@@ -1,0 +1,13 @@
+&lt;div class=&quot;tooltip&quot;&gt;
+  &lt;svg
+    class=&quot;tooltip__icon&quot;
+    width=&quot;24&quot;
+    height=&quot;24&quot;
+    viewBox=&quot;0 0 24 24&quot;
+    fill=&quot;none&quot;
+    xmlns=&quot;http://www.w3.org/2000/svg&quot;
+  &gt;
+    &lt;use href=&quot;/library/svg-sprites.svg#question&quot; /&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;tooltip__datails&quot;&gt;Helper Text&lt;/div&gt;
+&lt;/div&gt;

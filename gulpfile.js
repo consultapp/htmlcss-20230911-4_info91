@@ -57,13 +57,18 @@ function scss() {
 }
 
 function library() {
+  src('src/assets/images/*sprites.svg')
+    .pipe(imagemin())
+    .pipe(flatten())
+    .pipe(dest('dist/library'));
+
   return src('src/library/**/**.css')
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(concat('library.min.css'))
     .pipe(minify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist/assets/library'));
+    .pipe(dest('dist/library'));
 }
 
 const jsSrc = ['src/**/**.js'];
@@ -88,7 +93,7 @@ function serve() {
 
 function archiveLibrary() {
   return gulp
-    .src('dist/assets/library/*')
+    .src('dist/library/*')
     .pipe(zip('library.zip'))
     .pipe(gulp.dest('dist'));
 }
