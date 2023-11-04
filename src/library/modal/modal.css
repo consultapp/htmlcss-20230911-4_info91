@@ -1,6 +1,6 @@
 .modal {
   opacity: 0;
-
+  z-index: 4;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,6 +49,11 @@
   position: absolute;
   right: 12px;
   top: 12px;
+  transform: rotate(0);
+  transition: transform 250ms ease-in-out;
+}
+.modal__close:hover {
+  transform: rotate(180deg);
 }
 
 .modal[data-open] {
