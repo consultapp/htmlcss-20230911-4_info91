@@ -50,6 +50,15 @@
   animation: 50s linear 0s infinite normal skeletonBackground;
 }
 
+@media screen and (max-width: 768px) {
+  .skeleton__circle {
+    animation: 30s linear 0s infinite normal skeletonBackground;
+  }
+  .skeleton__bar {
+    animation: 20s linear 0s infinite normal skeletonBackground;
+  }
+}
+
 .skeleton__bar + .skeleton__bar {
   margin-top: 8px;
 }

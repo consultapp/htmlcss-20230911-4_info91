@@ -2,6 +2,14 @@
   padding-top: 24px;
   background-color: var(--backgroundColor);
 
+  &__logoLink {
+    text-decoration: none;
+
+    &:visited {
+      color: transparent;
+    }
+  }
+
   &__title {
     color: var(--fontColor);
     font-family: Inter;
