@@ -1,0 +1,31 @@
+&lt;div class=&quot;accordion&quot;&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__summary&quot;&gt;
+      Accordion item 1
+      &lt;svg class=&quot;accordion__summaryIcon&quot; width=&quot;18&quot; height=&quot;10&quot; fill=&quot;none&quot;&gt;
+        &lt;use href=&quot;/library/svg-sprites.svg#accordion&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+    &lt;div class=&quot;accordion__details&quot;&gt;
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam
+      consequat sunt nostrud amet.
+    &lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__summary&quot;&gt;
+      Accordion item 2
+      &lt;svg class=&quot;accordion__summaryIcon&quot; width=&quot;18&quot; height=&quot;10&quot; fill=&quot;none&quot;&gt;
+        &lt;use href=&quot;/library/svg-sprites.svg#accordion&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+  &lt;/details&gt;
+  &lt;details class=&quot;accordion__item&quot;&gt;
+    &lt;summary class=&quot;accordion__summary&quot;&gt;
+      Accordion item 3
+      &lt;svg class=&quot;accordion__summaryIcon&quot; width=&quot;18&quot; height=&quot;10&quot; fill=&quot;none&quot;&gt;
+        &lt;use href=&quot;/library/svg-sprites.svg#accordion&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/summary&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
